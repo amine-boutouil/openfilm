@@ -1,5 +1,18 @@
 # @openfilm/desktop
 
+## 0.3.3
+
+### Patch Changes
+
+- [`6a119f5`](https://github.com/openfilm/openfilm/commit/6a119f5f1bdb83192b413c6bde5eae83b76d318a) Thanks [@WEBGRS](https://github.com/WEBGRS)! - Desktop: DeepSeek Harness installed with npm on Windows starts again. From 0.2.2 it loads an addon that runs only on the Electron builds it names, and the app started its script on its own Electron, which is not one of them, so it stopped as it started with "unsupported Electron runtime fingerprint". Its npm launcher is used now, which starts it on the Node that installed it.
+
+- [#466](https://github.com/openfilm/openfilm/pull/466) [`e983acc`](https://github.com/openfilm/openfilm/commit/e983acce3a3ce2eb22b3959248d3aaae74370cf8) Thanks [@WEBGRS](https://github.com/WEBGRS)! - Studio: on Windows an open project can be renamed again after its agent has finished a turn. The chat's agent stays running for a while between turns, working in the project's folder, and Windows will not rename a folder a process works in, so every rename failed with "Rename failed. Please retry." until another project was opened. The agent between turns now stops before the rename (its next turn starts in the renamed folder), a folder that is only held for a moment is tried again, and one that something else still holds is refused with a message that says so and what to close.
+
+- [`e07ae4c`](https://github.com/openfilm/openfilm/commit/e07ae4cc940b5cdc70dc442f80317e09acb8e30f) Thanks [@yunloong-Y](https://github.com/yunloong-Y)! - Desktop: the Windows openfilm command no longer breaks when an install path contains %
+
+- Updated dependencies [[`ab67089`](https://github.com/openfilm/openfilm/commit/ab67089f3c6aebbdb917ce479a84a45bab9dd216), [`4c2264c`](https://github.com/openfilm/openfilm/commit/4c2264c1cb0c70ba09d2bab37b84f9cd0d521746), [`e983acc`](https://github.com/openfilm/openfilm/commit/e983acce3a3ce2eb22b3959248d3aaae74370cf8), [`76df36d`](https://github.com/openfilm/openfilm/commit/76df36dee8a9c818f2bcfdc61ecfec8e2c09ef84), [`a9a3d50`](https://github.com/openfilm/openfilm/commit/a9a3d50b6ca22e541521f17a8b342d02a40f090d), [`f6904f9`](https://github.com/openfilm/openfilm/commit/f6904f9cba8d8ae9abe4c96a0b4abf3ba4dabd6d), [`cf86d10`](https://github.com/openfilm/openfilm/commit/cf86d10783453e033b4c6559e3e6564fe178b0a2)]:
+  - openfilm@0.3.3
+
 ## 0.3.2
 
 ### Patch Changes
